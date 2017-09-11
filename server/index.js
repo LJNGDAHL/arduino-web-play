@@ -1,16 +1,19 @@
+const util = require('util');
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 
-const avrpizza = require('avr-pizza')
-const tmp = require('tmp')
-const fs = require('fs')
+const avrpizza = require('avr-pizza');
+const tmp = require('tmp');
+const fs = require('fs');
+
+const writeFile = util.promisify(fs.writeFile);
 
 
 /*
  * Needed to receive POST data
  */
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 /*
  * Serve static files
@@ -28,24 +31,9 @@ app.use(express.static('static'));
 app.post('/compile', function(req, res) {
   const formData = req.body.editor;
 
-  tmp.file({
-    dir: `${__dirname}/tmp_ino`,
-    postfix: '.ino',
-    keep: false
-  }, (error, path, fd, cleanupCallback) => {
+  tmp.file((error, path, fd, cleanupCallback) => {
     if (error) {
       throw error;
-    };
-
-    /**
-     * Writing a temporary ino file and saving it
-     * in tmp_ino folder
-     */
-    function writeFileAsync(path, data) {
-      return new Promise((resolve, reject) => {
-        fs.writeFileSync(path, data);
-        resolve();
-      })
     }
 
     /*
@@ -55,9 +43,9 @@ app.post('/compile', function(req, res) {
     const package = {
       sketch: path,
       board: 'uno'
-    }
+    };
 
-    writeFileAsync(path, formData)
+    writeFile(path, formData)
       .then(avrpizza.compile(package, (error, hex) => {
         cleanupCallback();
 

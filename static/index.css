@@ -15,16 +15,21 @@
 }
 
 .Connect {
+  background-color: #f2f2f2;
+  position: absolute;
+  width: 100vw;
+  top: 0;
+  left: 0;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 600px;
-  border: 1px solid black;
   padding: 0.5rem;
   margin-bottom: 2rem;
 }
 
+.Button {
+  margin: 0 0.5rem;
+}
 
 .Form {
   display: flex;
@@ -32,7 +37,6 @@
   align-items: center;
   flex-direction: column;
   width: 600px;
-  border: 1px solid black;
   padding: 0.5rem;
 }
 
@@ -47,6 +51,10 @@
   border: 1px solid black;
 }
 
+.u-borderLeft {
+  border-left: 1px solid black;
+}
+
 .u-flex {
   display: flex !important;
   align-items: center;
@@ -59,4 +67,12 @@
 
 .u-maxWidth {
   width: 100% !important;
+}
+
+.u-backgroundRed {
+  background-color: rgba(226, 77, 77, 0.87) !important;
+}
+
+.u-backgroundGreen {
+  background-color: #7FC841 !important;
 }
