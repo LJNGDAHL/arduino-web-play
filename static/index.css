@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+}
+
+/*
+ * Components
+ */
+.Body {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Connect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 600px;
+  border: 1px solid black;
+  padding: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+
+.Form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 600px;
+  border: 1px solid black;
+  padding: 0.5rem;
+}
+
+/*
+ * Utilities
+ */
+.u-italic {
+  font-style: italic !important;
+}
+
+.u-border {
+  border: 1px solid black;
+}
+
+.u-flex {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.u-centerText {
+  text-align: center;
+}
+
+.u-maxWidth {
+  width: 100% !important;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="index.css">
+  <title>Trying out WebUSB</title>
+</head>
+<body class="Body">
+  <h1 class="headline">Connect a USB device</h1>
+  <div class="Connect">
+  <p class="deviceField-js">No device connected.</p>
+  <button class="button button-js">Connect</button>
+  </div>
+  <form class="Form form-js" action="./compile" method="POST">
+    <label class="u-maxWidth u-centerText" for="editor">Editor</label>
+    <textarea class="u-maxWidth" name="editor" rows="10"></textarea>
+    <button class="upload-js" type="submit">Upload Code</button>
+  </form>
+  <script src="index.js"></script>
+</body>
+</html>
