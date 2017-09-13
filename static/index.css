@@ -6,12 +6,12 @@
  * Components
  */
 .Body {
+  align-items: center;
   display: flex;
-  height: 100vh;
-  width: 100vw;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  height: 100vh;
+  width: 100vw;
 }
 
 .Connect {
@@ -28,8 +28,33 @@
 }
 
 .Button {
-  margin: 0 0.5rem;
+  box-sizing: border-box;
+  border: 1px solid #1B1B1B;
+  background-color: #1B1B1B;
+  border: none;
+  color: #f2f2f2;
+  display: block;
+  font-weight: 700;
+  font-size: 1rem;
+  margin: 0.5rem auto;
+  transition: 250ms;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  padding: 0.5rem 2rem;
+  text-transform: uppercase;
 }
+
+.Button--connected {
+  background-color: #0FA15D;
+  color: #f2f2f2;
+}
+
+
+.Button:hover {
+  background-color: #0FA15D;
+}
+
 
 .Form {
   display: flex;
@@ -69,10 +94,14 @@
   width: 100% !important;
 }
 
-.u-backgroundRed {
-  background-color: rgba(226, 77, 77, 0.87) !important;
+.u-backgroundBlack {
+  background-color: #1B1B1B !important;
 }
 
-.u-backgroundGreen {
-  background-color: #7FC841 !important;
+u-fontL {
+  font-size: 1.7rem !important;
+}
+
+u-fontL {
+  font-weight: bold !important;
 }
