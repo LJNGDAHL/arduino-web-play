@@ -5,14 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="index.css">
-  <title>Transfer Arduino Sketch Code with WebUSB</title>
+  <title>Control your Uno</title>
 </head>
 <body class="Body">
-  <h1 class="headline headline-js">Transfer Arduino Sketch Code with WebUSB</h1>
-  <p class="u-italic">No installations, Web is Future.</p>
-  <div class="u-flex">
-    <button class="Button connect-js">Connect Device</button>
-  </div>
+  <h1 class="headline headline-js u-centerText">Control your Uno with a little help from a dying Chrome app</h1>
   <div class="u-centerText">
     <form class="Form form-js" action="./compile" method="POST">
       <label class="u-maxWidth u-centerText" for="editor">Editor</label>
@@ -21,6 +17,6 @@
     </form>
     <p class="u-italic status-js"></p>
   </div>
-  <script src="index.js"></script>
+  <script src="index.js" type="module"></script>
 </body>
 </html>

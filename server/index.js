@@ -4,6 +4,7 @@ const app = express();
 const bodyParser = require('body-parser');
 
 const avrpizza = require('avr-pizza');
+
 const tmp = require('tmp');
 const fs = require('fs');
 
@@ -55,13 +56,10 @@ app.post('/compile', function(req, res) {
           return;
         }
 
-        /* TODO: Instead of console.log, this hex should
-         * upload to Arduino.
-         */
-        console.log(`Looks good! ${hex}`);
+        // Send hex to client, where it's uploaded through a chrome app
         res.end(hex);
       }));
-  })
+  });
 });
 
 
